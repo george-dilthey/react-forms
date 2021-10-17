@@ -2,14 +2,16 @@ import React from 'react';
 
 class Form extends React.Component {
   state = {
-    firstName: "John",
+    firstName: "George",
     lastName: "Henry"
   }
 
   handleFirstNameChange = event => {
-    this.setState({
-      firstName: event.target.value
-    })
+    if(event.target.value != 5){
+      this.setState({
+        firstName: event.target.value
+      })
+    }
   }
 
   handleLastNameChange = event => {
